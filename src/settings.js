@@ -12,5 +12,17 @@ module.exports = {
    * @type {boolean} true | false
    * @description Whether show the logo in sidebar
    */
-  sidebarLogo: false
+  sidebarLogo: false,
+
+  /**
+   * @type {boolean} true | false
+   * @description Whether show the breadcrumb in navbar
+   */
+  hamburger: false,
+
+  /**
+   * @type {boolean} true | false
+   * @description Whether show the breadcrumb in navbar
+   */
+  breadcrumb: true
 }

@@ -1,8 +1,14 @@
 import Cookies from 'js-cookie'
+import defaultSettings from '@/settings'
+
+const { hamburger } = defaultSettings
 
 const state = {
   sidebar: {
-    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
+    // 当hamburger设置成false时 默认显示缩小sliderbar
+    opened: hamburger ?
+      Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
+      : false,
     withoutAnimation: false
   },
   device: 'desktop'
