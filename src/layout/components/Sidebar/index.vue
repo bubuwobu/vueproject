@@ -26,6 +26,14 @@ import variables from '@/styles/variables.scss'
 
 export default {
   components: { SidebarItem, Logo },
+  watch: {
+    $route() {
+      this.addTags()
+    }
+  },
+  mounted() {
+    this.addTags()
+  },
   computed: {
     ...mapGetters([
       'sidebar'
@@ -51,6 +59,15 @@ export default {
     isCollapse() {
       return !this.sidebar.opened
     }
+  },
+  methods: {
+    addTags() {
+      const { name } = this.$route
+      if (name) {
+        this.$store.dispatch('app/addView', this.$route)
+      }
+      return false
+    },
   }
 }
 </script>

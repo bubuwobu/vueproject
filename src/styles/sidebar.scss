@@ -15,9 +15,7 @@
     height: $sideItemBarHeight * 3;
     position: fixed;
     font-size: 0px;
-    top: 50%;
-    //
-    margin-top: -($sideItemBarHeight * 1.5);
+    top: calc(50% - #{$sideItemBarHeight * 2.5});
     //bottom: 0;
     left: 0;
     z-index: 1001;
