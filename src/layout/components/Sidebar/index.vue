@@ -67,7 +67,7 @@ export default {
         this.$store.dispatch('app/addView', this.$route)
       }
       return false
-    },
+    }
   }
 }
 </script>

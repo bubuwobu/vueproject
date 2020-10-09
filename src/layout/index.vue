@@ -1,13 +1,18 @@
 <template>
   <div :class="classObj" class="app-wrapper">
-    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
-    <sidebar class="sidebar-container" />
-    <div class="main-container">
-      <div :class="{'fixed-header':fixedHeader}">
-        <navbar />
+    <iframe src="http://vip.ow365.cn/?i=34&n=5&htool=1&furl=http%3A%2F%2Fofficeweb365.com%2Fviewfile%2F%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAHTML5%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91.pptx&p=1" />
+
+    <div class="main-wrapper">
+      <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
+      <sidebar class="sidebar-container" />
+      <div class="main-container">
+        <div v-if="navbar" :class="{'fixed-header':fixedHeader}">
+          <navbar />
+        </div>
+        <app-main />
       </div>
-      <app-main />
     </div>
+
   </div>
 </template>
 
@@ -26,6 +31,9 @@ export default {
   computed: {
     sidebar() {
       return this.$store.state.app.sidebar
+    },
+    navbar() {
+      return this.$store.state.settings.navbar
     },
     device() {
       return this.$store.state.app.device
@@ -62,6 +70,17 @@ export default {
     &.mobile.openSidebar{
       position: fixed;
       top: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100% - 5px);
+    }
+
+    .main-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
   .drawer-bg {

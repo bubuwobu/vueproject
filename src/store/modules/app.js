@@ -6,8 +6,8 @@ const { hamburger } = defaultSettings
 const state = {
   sidebar: {
     // 当hamburger设置成false时 默认显示缩小sliderbar
-    opened: hamburger ?
-      Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
+    opened: hamburger
+      ? Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
       : false,
     withoutAnimation: false
   },

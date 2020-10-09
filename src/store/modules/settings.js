@@ -1,11 +1,12 @@
 import defaultSettings from '@/settings'
 
-const { showSettings, fixedHeader, sidebarLogo, breadcrumb, hamburger } = defaultSettings
+const { showSettings, fixedHeader, sidebarLogo, navbar, breadcrumb, hamburger } = defaultSettings
 
 const state = {
   showSettings: showSettings,
   fixedHeader: fixedHeader,
   sidebarLogo: sidebarLogo,
+  navbar: navbar,
   breadcrumb: breadcrumb,
   hamburger: hamburger
 }

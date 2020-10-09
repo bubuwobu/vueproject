@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'UClass - Web',
 
   /**
    * @type {boolean} true | false
@@ -16,13 +16,19 @@ module.exports = {
 
   /**
    * @type {boolean} true | false
-   * @description Whether show the breadcrumb in navbar
+   * 是否显示navbar
+   */
+  navbar: false,
+
+  /**
+   * @type {boolean} true | false
+   * 必须在 navbar为true时才能显示隐藏
    */
   hamburger: false,
 
   /**
    * @type {boolean} true | false
-   * @description Whether show the breadcrumb in navbar
+   * 必须在 navbar为true时才能显示隐藏
    */
   breadcrumb: true
 }
